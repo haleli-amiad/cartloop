@@ -10,7 +10,7 @@ html {
 	scroll-behavior: smooth;
 	margin: 0 auto;
 	::selection {
-		background-color: $user;
+		background-color: $orange;
 	}
 }
 
@@ -72,14 +72,9 @@ a {
 
 button {
 	font-family: inter, sans-serif;
-	font-weight: bolder;
-	padding: 0.3rem 1.2rem;
 	border: none;
-	border-radius: 10px;
-	display: flex;
+	border-radius: .5rem;
 	letter-spacing: 1px;
-	align-items: center;
-	margin: 1rem 0 0 0;
 	cursor: pointer;
 
 	* {

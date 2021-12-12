@@ -1,0 +1,19 @@
+.controller {
+    button {
+        background-color: $orange;
+        font-family: inter, sans-serif;
+        font-weight: normal;
+        color: $bgc;
+        line-height: 24px;
+        &.add-button {
+            border-radius: 33px;
+            font-size: 16px;
+            height: 23px;
+            width: 23px;
+        }
+        &.send-button {
+            font-size: 12px;
+            padding: 0 0.5rem;
+        }
+    }
+}
