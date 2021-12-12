@@ -38,6 +38,10 @@ export const ChatProvider = ({ children }) => {
         socketRef.current.emit('debounce', null);
     }
 
+    const setMacroAsMessage = (macro) => {
+        setMessage(macro)
+    }
+
     const handleChange = (e) => {
         setMessage(e.target.value);
     }
@@ -49,7 +53,7 @@ export const ChatProvider = ({ children }) => {
     return (
         <ChatContext.Provider
             value={{
-                receivedMessage, handleChange, sendMessage, messages, message, id, sendByButton
+                receivedMessage, handleChange, sendMessage, messages, message, id, sendByButton, setMacroAsMessage
             }}>
             {children}
         </ChatContext.Provider>

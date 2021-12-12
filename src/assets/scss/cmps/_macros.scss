@@ -1,15 +1,21 @@
 .macros-container {
-    background-color: $bgc;
+    background-color: $container;
     cursor: pointer;
+    width: 25%;
+    padding: 8px;
+    border-radius: 8px;
+    height: 100%;
     .macros-header {
         h2 {
+            font-size: 13px;
             font-family: roobert, sans-serif;
             font-weight: 600;
         }
     }
     .message {
         font-family: roobert, sans-serif;
-        background-color: $container !important;
+        background-color: $bgc !important;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
         &:hover {
             outline: 2px solid $user;
         }

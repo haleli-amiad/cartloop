@@ -3,9 +3,9 @@ import { useContext } from 'react';
 import Message from './Message';
 const Messages = () => {
   const { messages, id } = useContext(ChatContext);
-  
+
   return (
-    <div className="messages">
+    <div className="messages flex col">
       {messages.map((message, i) => {
         if (message.id === id) {
           return <Message key={i} message={message.body} author={'user'} />;

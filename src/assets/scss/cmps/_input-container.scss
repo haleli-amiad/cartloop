@@ -1,0 +1,24 @@
+.input-container {
+    background-color: $container;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    margin-top:.5rem;
+    .white-background {
+        padding: 1rem;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        background-color: $bgc;
+        form {
+            input {
+                width: 100%;
+                outline: none;
+                border: none;
+                color: $text;
+                font-family: inter, sans-serif;
+                &::placeholder {
+                    color: $text;
+                }
+            }
+        }
+    }
+}

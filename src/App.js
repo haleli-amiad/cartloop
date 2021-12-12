@@ -3,10 +3,12 @@ import ChatContainer from './cmps/ChatContainer';
 import InputContainer from "./cmps/InputContainer";
 export default function App() {
   return (
-    <div className="App">
-      <ChatContainer/>
-      <MacrosContainer/>
-      <InputContainer/>
+    <div className="App flex space">
+      <span>
+        <ChatContainer />
+        <InputContainer />
+      </span>
+      <MacrosContainer />
     </div>
   );
 }
