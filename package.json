@@ -26,6 +26,9 @@
     "build:prod": "env-cmd -f ./environments/.prod.env npm run-script build"
   },
   "eslintConfig": {
+    "rules":{
+      "no-unused-expressions": "off"
+    },
     "extends": [
       "react-app",
       "react-app/jest"
