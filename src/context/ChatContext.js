@@ -13,29 +13,7 @@ export const ChatProvider = ({ children }) => {
         id
     };
 
-    const sendMessage = (e) => {
-        e.preventDefault();
-        setMessage('');
-        socketRef.current.emit('send message', messageData);
-        setTimeout(() => {
-            socketRef.current.emit('debounced', null);
-        }, 4000);
-    }
-
-    const sendByButton = () => {
-        setMessage('')
-        socketRef.current.emit('send message', messageData);
-        setTimeout(() => {
-            socketRef.current.emit('debounced', null);
-        }, 4000);
-    }
-
-    const handleChange = (e) => {
-        setMessage(e.target.value);
-    }
-
     useEffect(() => {
-        // setId('user')
         socketRef.current = io.connect(`http://${window.location.hostname}:3030`);
         socketRef.current.on('id', (userId) => {
             setId(userId);
@@ -47,6 +25,22 @@ export const ChatProvider = ({ children }) => {
             receivedMessage(message);
         });
     }, []);
+
+    const sendMessage = (e) => {
+        e.preventDefault();
+        setMessage('');
+        socketRef.current.emit('send message', messageData);
+    }
+
+    const sendByButton = () => {
+        setMessage('')
+        socketRef.current.emit('send message', messageData);
+        socketRef.current.emit('debounce', null);
+    }
+
+    const handleChange = (e) => {
+        setMessage(e.target.value);
+    }
 
     const receivedMessage = (message) => {
         setMessages((oldMsgs) => [...oldMsgs, message]);

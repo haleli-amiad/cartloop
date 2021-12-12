@@ -5,7 +5,10 @@ export default function MacrosContainer() {
   const messages = [
     'Immersive chat startups have a very different vision for the future of voice',
     'Hello %user%  👋. My name is %expert%. What can I do for you today?',
-    'Apple opens another megastore in China amid William Barr criticism'
+    'Apple opens another megastore in China amid William Barr criticism',
+    'Any mechanical keyboard enthusiasts in design?',
+    'Understanding color theory: the color wheel and finding complementary colors',
+    'The More Important the Work, the More Important the Rest'
   ];
 
   return (

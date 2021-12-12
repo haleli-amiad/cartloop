@@ -1,13 +1,17 @@
-.macros-container{
+.macros-container {
     background-color: $bgc;
-    .macros-header{
-        h2{
+    cursor: pointer;
+    .macros-header {
+        h2 {
             font-family: roobert, sans-serif;
             font-weight: 600;
         }
     }
     .message {
         font-family: roobert, sans-serif;
-        background-color: $container;
+        background-color: $container !important;
+        &:hover {
+            outline: 2px solid $user;
+        }
     }
 }
