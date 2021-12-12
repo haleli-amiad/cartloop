@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import Message from './Message';
 const Messages = () => {
   const { messages, id } = useContext(ChatContext);
-  // console.log(messages);
+  
   return (
     <div className="messages">
       {messages.map((message, i) => {
