@@ -12,7 +12,7 @@ export default function MacrosContainer() {
     <div className="macros-container">
       <div className="macros-header flex space">
         <h2>Macros</h2>
-        <img src={arrowDown} alt="" />
+        <img src={arrowDown} alt="arrow down" />
       </div>
       <ul>
         {messages.map((message, i) => <Message message={message} key={i} />)}

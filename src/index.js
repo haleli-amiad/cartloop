@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './assets/scss/global.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { ChatProvider } from './context/ChatContext'
 ReactDOM.render(
   <React.StrictMode>
+    <ChatProvider>
     <App />
+    </ChatProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

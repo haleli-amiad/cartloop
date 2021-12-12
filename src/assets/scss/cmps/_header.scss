@@ -1,0 +1,11 @@
+.chat-header {
+    h1 {
+        color: $subtext;
+        line-height: 24px;
+        padding: 16px 9px;
+    }
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: $container;
+    border-bottom: 1px solid  rgba(22, 22, 22, 0.16);
+}
