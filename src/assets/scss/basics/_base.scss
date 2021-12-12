@@ -1,0 +1,117 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: roobert, sans-serif;
+	font-size: 16px;
+	background-color: $bgc;
+	color: $text;
+	scroll-behavior: smooth;
+	margin: 0 auto;
+	::selection {
+		background-color: $user;
+	}
+}
+
+a {
+	cursor: pointer;
+}
+body {
+	margin: 0;
+	min-height: 100vh;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: rem(30px);
+	@include for-normal-layout {
+		font-size: rem(59px);
+	}
+}
+
+p {
+	font-size: 1rem;
+	@include for-mid-layout {
+		font-size: rem(20px);
+	}
+}
+
+h1, h3 {
+	font-family: roobert, impact, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	font-weight: normal;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+button {
+	font-family: inter,sans-serif;
+	font-weight: bolder;
+	padding: 0.3rem 1.2rem;
+	border: none;
+	border-radius: 10px;
+	display: flex;
+	letter-spacing: 1px;
+	align-items: center;
+	margin: 1rem 0 0 0;
+	cursor: pointer;
+
+	* {
+		pointer-events: none;
+	}
+}
+
+li {
+	list-style: none;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+input {
+	font-family: inherit;
+	text-align: inherit;
+}
+a:hover {
+	text-decoration: none;
+}
+
+// MAC like scrollbar
+::-webkit-scrollbar {
+	width: 8px;
+	background-color: rgba(210, 210, 210, 0.8);
+	-webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar:hover {
+	background-color: rgba(0, 0, 0, 0.79);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+	-webkit-border-radius: 100px;
+}

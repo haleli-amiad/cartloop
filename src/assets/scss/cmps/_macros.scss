@@ -1,0 +1,13 @@
+.macros-container{
+    background-color: $bgc;
+    .macros-header{
+        h2{
+            font-family: roobert, sans-serif;
+            font-weight: 600;
+        }
+    }
+    .message {
+        font-family: roobert, sans-serif;
+        background-color: $container;
+    }
+}
