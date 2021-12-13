@@ -19,9 +19,12 @@
         border-radius: 4px;
         background-color: $bgc;
         form {
+            height: 50%;
             input {
+                height: 100%;
                 width: 100%;
                 color: $text;
+                font-size: 12px;
                 font-family: inter, sans-serif;
                 border-bottom: 1px solid rgba(22, 22, 22, 0.08);
                 padding-bottom: 1rem;

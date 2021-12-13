@@ -2,9 +2,10 @@
     background-color: $container;
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
     @include for-normal-layout {
-    margin-right: .5rem;
+        margin-right: 0.5rem;
     }
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }

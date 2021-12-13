@@ -7,10 +7,11 @@ export const ChatProvider = ({ children }) => {
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const socketRef = useRef();
-
     const messageData = {
         body: message,
-        id
+        id,
+        name: 'Cameron Williamson',
+        isLastMessage: true
     };
 
     useEffect(() => {

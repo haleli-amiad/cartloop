@@ -55,6 +55,19 @@
 	padding: 0;
 }
 
+.align-start {
+	align-self: flex-start;
+}
+
+.align-end {
+	align-self: flex-end;
+}
+
+.justify-right {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 // Aspect ratios
 
 // .ratio-16-9 {

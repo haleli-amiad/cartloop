@@ -1,4 +1,17 @@
 .messages {
     padding: 1rem;
-    // background-color: $container;
+    p {
+        font-size: 10px;
+    }
+    .chat-emoji {
+        width: 12px;
+        height: 12px;
+        &.cartloop-avatar {
+            margin-left: 0.5rem;
+        }
+        &.smiley-emoji {
+            margin-left: 12px;
+            margin-right: 0.5rem;
+        }
+    }
 }
