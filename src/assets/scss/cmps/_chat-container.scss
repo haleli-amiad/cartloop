@@ -1,6 +1,10 @@
 .chat-container {
     background-color: $container;
-    height: 80%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 1rem;
+    @include for-normal-layout {
+        margin-bottom: 0;
+    }
+    border-radius: .5rem;
 }

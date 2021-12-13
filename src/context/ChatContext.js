@@ -33,6 +33,7 @@ export const ChatProvider = ({ children }) => {
     }
 
     const sendByButton = () => {
+        if (!message) return
         setMessage('')
         socketRef.current.emit('send message', messageData);
         socketRef.current.emit('debounce', null);

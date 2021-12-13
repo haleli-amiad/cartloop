@@ -18,20 +18,24 @@ export default function MacrosContainer() {
   };
 
   return (
-    <div className="macros-container">
-      <div className="macros-header flex space">
-        <h2>Macros</h2>
-        <img src={arrowDown} alt="arrow down" />
+    <section className="macros-container">
+      <div className="mobile-container">
+        <div className="macros-header flex space">
+          <h2>Macros</h2>
+          <img src={arrowDown} alt="arrow down" />
+        </div>
+        <div className="mobile-scroll">
+          <ul>
+            {messages.map((message, i) => (
+              <Message
+                message={message}
+                key={i}
+                onSendMacro={() => sendMacro(message)}
+              />
+            ))}
+          </ul>
+        </div>
       </div>
-      <ul>
-        {messages.map((message, i) => (
-          <Message
-            message={message}
-            key={i}
-            onSendMacro={() => sendMacro(message)}
-          />
-        ))}
-      </ul>
-    </div>
+    </section>
   );
 }
