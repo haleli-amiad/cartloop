@@ -11,7 +11,6 @@ export const ChatProvider = ({ children }) => {
         body: message,
         id,
         name: 'Cameron Williamson',
-        isLastMessage: true
     };
 
     useEffect(() => {
