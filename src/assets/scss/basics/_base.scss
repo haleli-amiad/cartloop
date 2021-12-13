@@ -29,7 +29,6 @@ body {
 		@include for-normal-layout {
 			grid-template-columns: 80% 20%;
 			grid-template-rows: 70% 30%;
-			gap: 1rem;
 		}
 	}
 }

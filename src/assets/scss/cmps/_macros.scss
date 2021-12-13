@@ -28,7 +28,7 @@
     }
     .mobile-container {
         padding: .5rem 1rem;
-        border-bottom: 4px solid #fff;
+        // border-bottom: 4px solid #fff;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.12);
         border-radius: 4px;
         background-color: $bgc;
@@ -44,6 +44,9 @@
         height: 100%;
         width: 100%;
         overflow-y: hidden;
+        @include for-normal-layout {
+            overflow: hidden;
+        }
         ul {
             display: flex;
             overflow-x: auto;
