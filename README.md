@@ -15,6 +15,7 @@ Functionalities:
 In the project directory, you can run:
 
 npm start / start:dev
+
 Runs the app in the development mode.
 Open http://localhost:8080 to view it in the browser.
 
@@ -27,3 +28,5 @@ Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 Server is being served on another repository, you find can it here: ***
+![Alt text](https://res.cloudinary.com/dksmeovlj/image/upload/v1639425500/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.11_g2lnrv.png "Desktop version")
+![Alt text](https://res.cloudinary.com/dksmeovlj/image/upload/v1639425506/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.24_vnqi1t.png "Mobile version")
