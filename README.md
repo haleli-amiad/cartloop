@@ -5,7 +5,7 @@ Functionalities:
 
 1. Ready to send messages are available via macros (by click)
 2. Chatting via sockets.io
-3. Server response with random answer when sending a message via 'resolve' button.
+3. Server response with random answer when sending a message.
 4. State is managed via UseContext.
 5. Messages are validated against the following characters: aA-zZ1234567890-=.,
 6. Design is fully responsive.

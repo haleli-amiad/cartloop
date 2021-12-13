@@ -4,10 +4,8 @@ import InputContainer from "./cmps/InputContainer";
 export default function App() {
   return (
     <div className="App">
-      {/* <span className="desktop-container"> */}
-        <ChatContainer />
-        <InputContainer />
-      {/* </span> */}
+      <ChatContainer />
+      <InputContainer />
       <MacrosContainer />
     </div>
   );

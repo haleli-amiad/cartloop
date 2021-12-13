@@ -27,17 +27,31 @@ export const ChatProvider = ({ children }) => {
         });
     }, []);
 
+    useEffect(() => {
+        messages.length > 10 ? setMessages([]) : null
+    }, [messages])
+
+    const validateMessage = () => {
+        const regex = new RegExp(/[!@#$%^&*()"{}|<>]/g);
+        const isUnallowedChars = regex.test(message)
+        if (isUnallowedChars) {
+            console.log('unvalid');
+            // create function for user notification on unvalid chars
+        } else {
+            setMessage('');
+            socketRef.current.emit('send message', messageData);
+            socketRef.current.emit('debounce', null);
+        }
+    }
+
     const sendMessage = (e) => {
         e.preventDefault();
-        setMessage('');
-        socketRef.current.emit('send message', messageData);
+        validateMessage()
     }
 
     const sendByButton = () => {
         if (!message) return
-        setMessage('')
-        socketRef.current.emit('send message', messageData);
-        socketRef.current.emit('debounce', null);
+        validateMessage(message)
     }
 
     const setMacroAsMessage = (macro) => {
