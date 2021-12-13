@@ -12,7 +12,7 @@ const MessageInput = () => {
 
   return (
     <section className="input-container">
-      <div className="white-background">
+      <div className="white-background flex space col">
         <form onSubmit={sendMessage}>
           <input
             value={message}

@@ -1,6 +1,6 @@
 import Smiley from '../assets/imgs/smiley.png';
 import Attach from '../assets/imgs/attach.png';
-import Plus from '../assets/imgs/plus.png';
+// import Plus from '../assets/imgs/plus.png';
 export default function Controller({ onSubmitMessage }) {
 
   const submitMessage = () => { 
@@ -17,7 +17,7 @@ export default function Controller({ onSubmitMessage }) {
         <img src={Attach} alt="attach file" />
         <img src={Smiley} alt="add emoji" />
       </span>
-      <button className="send-button" onClick={submitMessage}>
+      <button className="send-button flex center" onClick={submitMessage}>
         Resolve
       </button>
     </div>

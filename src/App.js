@@ -4,7 +4,7 @@ import InputContainer from "./cmps/InputContainer";
 export default function App() {
   return (
     <div className="App flex space">
-      <span>
+      <span className="desktop-container">
         <ChatContainer />
         <InputContainer />
       </span>
