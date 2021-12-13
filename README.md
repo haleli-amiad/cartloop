@@ -29,5 +29,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 Server is being served on another repository, you find can it here: \*\*\*
 
-<img src="https://res.cloudinary.com/dksmeovlj/image/upload/v1639425500/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.11_g2lnrv.png" width="200" />
-<img src="https://res.cloudinary.com/dksmeovlj/image/upload/v1639425506/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.24_vnqi1t.png" width="200" />
+<img src="https://res.cloudinary.com/dksmeovlj/image/upload/v1639425500/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.11_g2lnrv.png" width="400" />
+<img src="https://res.cloudinary.com/dksmeovlj/image/upload/v1639425506/%D7%A6%D7%99%D7%9C%D7%95%D7%9D_%D7%9E%D7%A1%D7%9A_2021-12-13_%D7%91-20.53.24_vnqi1t.png" width="200" height="400" />
