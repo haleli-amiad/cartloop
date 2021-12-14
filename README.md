@@ -1,7 +1,7 @@
 This project is a simple SPA with React that simulates a text message conversation between two people.
 In this case, the "other user" is the server.
 
-Functionalities:
+Features:
 
 1. Ready to send messages are available via macros (by click)
 2. Chatting via sockets.io
@@ -9,8 +9,9 @@ Functionalities:
 4. State is managed via UseContext.
 5. Messages are validated against the following characters: aA-zZ1234567890-=.,
 6. Design is fully responsive.
-7. User gets notified when a message is invalid.
-8. Tech stack: React.js, Hooks, Sass, Node.js, Express.
+8. Design is vanilla, no UI libraries.
+8. User gets notified when a message is invalid.
+9. Tech stack: React.js, Hooks, Sass, Node.js, Express.
 
 In the project directory, you can run:
 
