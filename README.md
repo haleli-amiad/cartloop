@@ -17,11 +17,11 @@ Features:
 
 In the project directory, you can run:
 
-npm start, both in directory file and in client file.
-the first one will run the server, and the second will run the client.
-
+npm start => cd client => npm start
+the first 'start' command will run the server, and the second will run the client.
 Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+Open http://localhost:3000 to view it in the browser.
+server will run on 3030.
 
 npm test
 Launches the test runner in the interactive watch mode.
