@@ -10,7 +10,7 @@ logs
 
 # production
 /build
-
+Procfile
 # misc
 .DS_Store
 .env.local
