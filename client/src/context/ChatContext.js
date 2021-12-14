@@ -13,11 +13,12 @@ export const ChatProvider = ({ children }) => {
         id,
         name: 'Cameron Williamson',
     };
-
+    const ENV_URL = process.env.NODE_ENV === 'development'? `http://${window.location.hostname}:3030` : 'https://cartloop.herokuapp.com/'
+    console.log(process.env.NODE_ENV);
 
     // Listeners
     useEffect(() => {
-        socketRef.current = io.connect(`http://${window.location.hostname}:3030`);
+        socketRef.current = io.connect(ENV_URL);
         socketRef.current.on('id', (userId) => {
             setId(userId);
         });
