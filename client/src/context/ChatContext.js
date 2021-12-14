@@ -16,8 +16,8 @@ export const ChatProvider = ({ children }) => {
 
     // Listeners
     useEffect(() => {
-        const ENV_URL = process.env.NODE_ENV === 'development' ? `${window.location.hostname}:3030` : '/'
-        socketRef.current = io.connect(ENV_URL);
+        // const ENV_URL = process.env.NODE_ENV === 'development' ? `${window.location.hostname}:3030` : '/'
+        socketRef.current = io.connect('https://cartloop.herokuapp.com/');
         socketRef.current.on('id', (userId) => {
             setId(userId);
         });
