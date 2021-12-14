@@ -13,7 +13,7 @@ export const ChatProvider = ({ children }) => {
         id,
         name: 'Cameron Williamson',
     };
-    const ENV_URL = process.env.NODE_ENV === 'development'? `http://${window.location.hostname}:3030` : 'https://cartloop.herokuapp.com/'
+    const ENV_URL = process.env.NODE_ENV === 'development'? `http://${window.location.hostname}:3030` : '/'
     console.log(process.env.NODE_ENV);
 
     // Listeners
