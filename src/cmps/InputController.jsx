@@ -1,6 +1,6 @@
 import Smiley from '../assets/imgs/smiley.png';
 import Attach from '../assets/imgs/attach.png';
-export default function Controller({ onSubmitMessage }) {
+export default function InputController({ onSubmitMessage }) {
   const submitMessage = () => {
     onSubmitMessage();
   };

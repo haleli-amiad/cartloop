@@ -9,7 +9,7 @@ export default function Messages() {
 
   return (
     messages && (
-      <div className="messages flex col">
+      <ul className="messages flex col">
         {messages.map((message, i) => {
           if (message.id === id) {
             return (
@@ -46,7 +46,7 @@ export default function Messages() {
             );
           }
         })}
-      </div>
+      </ul>
     )
   );
 }

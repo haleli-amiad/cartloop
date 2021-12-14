@@ -1,0 +1,17 @@
+.toast {
+    color: $bgc;
+    position: fixed;
+    top: 4%;
+    left: 50%;
+    width: 230px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -115px;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    &.opacity {
+        opacity: 1;
+    }
+}

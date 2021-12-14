@@ -1,9 +1,9 @@
 import { ChatContext } from '../context/ChatContext';
-import Controller from './Controller';
+import InputController from './InputController';
 import { useContext, useRef } from 'react';
 const MessageInput = () => {
   const inputRef = useRef();
-  const { sendMessage, handleChange, message, sendByButton } = useContext(
+  const { sendByKey, handleChange, message, sendByButton } = useContext(
     ChatContext
   );
   const submitMessage = () => {
@@ -13,7 +13,7 @@ const MessageInput = () => {
   return (
     <section className="input-container">
       <div className="white-background flex space col">
-        <form onSubmit={sendMessage}>
+        <form onSubmit={sendByKey}>
           <input
             value={message}
             type="text"
@@ -22,7 +22,7 @@ const MessageInput = () => {
             placeholder="Say something..."
           />
         </form>
-        <Controller onSubmitMessage={submitMessage} />
+        <InputController onSubmitMessage={submitMessage} />
       </div>
     </section>
   );

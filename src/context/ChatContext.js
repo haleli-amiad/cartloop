@@ -5,6 +5,7 @@ export const ChatContext = createContext()
 export const ChatProvider = ({ children }) => {
     const [id, setId] = useState();
     const [messages, setMessages] = useState([]);
+    const [isInvalidMessage, setIsInvalidMessage] = useState(false)
     const [message, setMessage] = useState('');
     const socketRef = useRef();
     const messageData = {
@@ -13,6 +14,8 @@ export const ChatProvider = ({ children }) => {
         name: 'Cameron Williamson',
     };
 
+
+    // Listeners
     useEffect(() => {
         socketRef.current = io.connect(`http://${window.location.hostname}:3030`);
         socketRef.current.on('id', (userId) => {
@@ -26,49 +29,64 @@ export const ChatProvider = ({ children }) => {
         });
     }, []);
 
+    // Delete history when screen is full
     useEffect(() => {
         messages.length > 10 ? setMessages([]) : null
     }, [messages])
 
+    // Validate against unallowed characters
     const validateMessage = () => {
         const regex = new RegExp(/[!@#$%^&*()"{}|<>]/g);
         const isUnallowedChars = regex.test(message)
-        if (isUnallowedChars) {
-            console.log('unvalid');
-            // create function for user notification on unvalid chars
-        } else {
-            setMessage('');
-            socketRef.current.emit('send message', messageData);
-            socketRef.current.emit('debounce', null);
-        }
+        isUnallowedChars ? createToast() : sendMessage()
     }
 
-    const sendMessage = (e) => {
+    // Emit event to server sockets
+    const sendMessage = () => {
+        setMessage('');
+        socketRef.current.emit('send message', messageData);
+        socketRef.current.emit('debounce', null);
+    }
+
+    // Notify user for invalid message
+    const createToast = () => {
+        setIsInvalidMessage(true)
+        setTimeout(() => {
+            setIsInvalidMessage(false)
+        }, 2000);
+    }
+
+    // Check message when pressing Enter
+    const sendByKey = (e) => {
         e.preventDefault();
         validateMessage()
     }
 
+    // Check message when pressing on 'Resolve' button
     const sendByButton = () => {
         if (!message) return
         validateMessage(message)
     }
 
+    // Set macro as message (when clicking on macro)
     const setMacroAsMessage = (macro) => {
         setMessage(macro)
     }
 
+    // Bind message and input
     const handleChange = (e) => {
         setMessage(e.target.value);
     }
 
+    // Add new message to messages array
     const receivedMessage = (message) => {
-        setMessages((oldMsgs) => [...oldMsgs, message]);
+        setMessages((oldMessages) => [...oldMessages, message]);
     }
 
     return (
         <ChatContext.Provider
             value={{
-                receivedMessage, handleChange, sendMessage, messages, message, id, sendByButton, setMacroAsMessage
+                receivedMessage, handleChange, sendByKey, messages, message, id, sendByButton, setMacroAsMessage, isInvalidMessage
             }}>
             {children}
         </ChatContext.Provider>
